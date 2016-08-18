@@ -32,8 +32,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
     #&& mkdir -p /usr/local/src/postgresql/postgresql-9.0.23/build \
     && cd /usr/local/src/postgresql/postgresql-9.0.23 \
     && ./configure \
-    && make \
-    && make install 
+    && make world \
+    && make install-world
 
 ENV PG_MAJOR 9.0
 ENV PG_VERSION 9.0.23
